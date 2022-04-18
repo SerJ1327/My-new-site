@@ -1,0 +1,106 @@
+/* обнулення */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+/* end обнулення */
+html,
+body {
+	height: 100%;	/* притискаємо footer_step_1/5 */
+	line-height: 1;
+	font-size: 24px;
+	background-color: #333;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/* обгортка */
+.wrapper { 
+	/* адаптивна верстка */
+	overflow: hidden;
+	display: flex; /*притискаємо _footer_step_2/5 */
+	min-height: 100%; /*притискаємо _footer_step_3/5 */
+	flex-direction: column; /*притискаємо _footer_step_4/5 */
+	/* end */
+	font-display: flex;
+	border: 1px rgb(194, 17, 17) solid;
+}
+.container {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	border: 1px greenyellow solid;
+	color: rgba(0, 110, 255, 0.897);
+	font-size: 48px;
+}
+/* адаптивна "отзивчевая" верстка */
+@media (max-width:1200px){
+	.container{
+		max-width: 970px;
+	}
+}
+@media (max-width:992px){
+	.container{
+		max-width: 750;
+	}
+}
+@media (max-width:767px){
+	.container{
+		max-width: none;
+	}
+}
+.header {
+	background-color: lightcyan;
+	padding: 30px;
+	text-align: center;
+}
+
+.main {
+	padding: 30px;
+	flex: 1 1 auto; min-height: 100%; /*притискаємо _footer_step_5/5 */
+	color: lightsteelblue;
+}
+
+.wrapper-number {
+	border: 1px royalblue solid;
+}
+.number {
+	border: 3px royalblue solid;
+	color: aliceblue;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+	width: 20%;
+	position: top left;
+
+}
+.footer {
+	background-color: aliceblue;
+	color: gray;
+	padding: 30px;
+	text-align: center;
+
+}
